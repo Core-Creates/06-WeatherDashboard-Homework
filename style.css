@@ -1,0 +1,23 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    padding: 20px;
+    font-size: 40px;
+    font-weight: 900;
+    
+}
+
+li{
+    
+    width: 20%;
+    margin-left: 20px;
+}
+
+.card {
+    margin: 40px;
+    width: 400px;
+    float: unset;
+}
+
