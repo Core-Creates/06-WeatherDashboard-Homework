@@ -4,9 +4,12 @@ var url = "https://api.openweathermap.org/data/2.5/onecall?lat=";
 // Grabs stuff in cities id
 var userCityId = document.getElementById('cities');
 
+
+var el = document.getElementById('showVal');
+
 var userSelection = [ "Seatle", "New York", "New Orleans", "Los Angeles", "Austin"];
 
-console.log(userSelection.value);
+// console.log(userSelection);
 
 
 url = url + userSelection;
@@ -15,9 +18,15 @@ function getSelectedOption(userSelection) {
     var opt;
     for ( var i = 0, len = userSelection.length; i < len; i++ ) {
 
-        opt = userSelection.options[i];
+        opt = userSelection[i];
+
+        console.log(opt);
+        
         if ( opt.selected === true ) {
-            break;
+            console.log(opt);
+            return opt;
+            
+            
         }
     }
     return opt;
@@ -26,6 +35,8 @@ function getSelectedOption(userSelection) {
 // get selected option in sel (reference obtained above)
 var opt = getSelectedOption(userSelection);
 
-// display its value and text
-console.log( opt.value );
-console.log( opt.text );
+userCityId.onclick = function () {
+    el.value = userSelection.value; 
+}
+
+
