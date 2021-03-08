@@ -9,11 +9,12 @@ nav{
     
 }
 
-li{
+aside{
     
     width: 20%;
-    margin-left: 20px;
+    margin-left: 40px;
 }
+
 
 .card {
     margin: 40px;
