@@ -17,6 +17,7 @@ $(document).ready(function () {
     var values = document.getElementById('showVal');
     var weather = document.getElementById('main-content');
     var city = document.getElementById('cityName');
+    var feelsLike = document.getElementById('feels');
 
     // var userSelection = ["Seatle", "New York", "New Orleans", "Los Angeles", "Austin"];
 
@@ -49,8 +50,8 @@ $(document).ready(function () {
                     console.log("Current temp: " + currentTemperature);
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
-                    weather.innerHTML =  `\nCurrent Temperature: ${currentTemperature} °F \n
-                    Feels like: ${data.current.feels_like}`;
+                    weather.innerHTML =  `\nCurrent Temperature: ${currentTemperature} °F \n`;
+                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like}`;
 
                     
                 }
@@ -82,8 +83,8 @@ $(document).ready(function () {
                     console.log("Current temp: " + currentTemperature);
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
-                    weather.innerHTML =  `\nCurrent Temperature: ${currentTemperature} °F \n
-                    Feels like: ${data.current.feels_like}`;
+                    weather.innerHTML =  `\nCurrent Temperature: ${currentTemperature} °F \n`;
+                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like}`;
 
                     
                 }
@@ -115,8 +116,8 @@ $(document).ready(function () {
                     console.log("Current temp: " + currentTemperature);
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
-                    weather.innerHTML =  `\nCurrent Temperature: ${currentTemperature} °F \n
-                    Feels like: ${data.current.feels_like}`;
+                    weather.innerHTML =  `\nCurrent Temperature: ${currentTemperature} °F \n`;
+                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like}`;
 
                     
                 }
@@ -145,8 +146,8 @@ $(document).ready(function () {
                     console.log("Current temp: " + currentTemperature);
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
-                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n
-                    Feels like: ${data.current.feels_like}`;
+                    weather.innerHTML =  `\nCurrent Temperature: ${currentTemperature} °F \n`;
+                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like}`;
 
                 }
             });
@@ -157,8 +158,8 @@ $(document).ready(function () {
         }
         else if (selection.anchorNode.data == "Austin") {
 
-            lat = "30.267153";
-            lon =  "-97.743057";
+            lat = "	30.266666";
+            lon =  "-97.733330";
             time = "1586468027";
             API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
             url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&dt=${time}&appid=${API_key}`;
@@ -176,8 +177,8 @@ $(document).ready(function () {
                     console.log("Current temp: " + currentTemperature);
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
-                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n
-                    Feels like: ${data.current.feels_like}`;
+                    weather.innerHTML =  `Current Temperature: ${currentTemperature} °F \n`;
+                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like}`;
 
                     
                 }
