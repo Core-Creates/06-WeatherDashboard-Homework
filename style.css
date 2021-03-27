@@ -1,18 +1,22 @@
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: Google Sans, arial, sans-serif !important;
 }
 
 nav{
     padding: 20px;
     font-size: 40px;
     font-weight: 900;
+    background-color: rgba(0, 195, 255, 0.87);
+    box-shadow: 0 5px rgba(0, 0, 0, 0.493);
     
 }
 
 aside{
     
     width: 20%;
-    margin-left: 40px;
+    margin-left: 80px;
+    
 }
 
 
@@ -20,11 +24,35 @@ aside{
     margin: 40px;
     width: 400px;
     float: unset;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.596);
 }
 
 input{
     width: 80%;
+    height: 35px;
+    border-radius: 7px;
+    border: 0.5px solid rgba(0, 0, 0, 0.247);
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.445);
 }
+
+#cities{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.596);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+main{
+    float:right; 
+    width: 70%; 
+    margin-right: 100px; 
+    height: 400px;
+    /* padding: 10px; */
+}
+#weatherCard{
+    padding: 50px;
+}
+
 
 /* ************************************************************************ENDING OF Desktop CSS Settings *************************/
 
@@ -75,6 +103,12 @@ input{
     }
     aside {
         margin-left: 20px;
+    }
+    main{
+        margin-right: 70px;
+    }
+    #weatherCard{
+        margin-right: 10px;
     }
 
 }
