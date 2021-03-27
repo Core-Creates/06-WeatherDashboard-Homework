@@ -28,7 +28,7 @@ $(document).ready(function () {
 
         console.log(selection);
 
-        if (selection.anchorNode.data == "Seatle") {
+        if (selection.anchorNode.data == "Seattle") {
 
             lat = "47.606209";
             lon =  "-122.332069";
@@ -49,7 +49,8 @@ $(document).ready(function () {
                     console.log("Current temp: " + currentTemperature);
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
-                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n`;
+                    weather.innerHTML =  `\nCurrent Temperature: ${currentTemperature} °F \n
+                    Feels like: ${data.current.feels_like}`;
 
                     
                 }
@@ -81,7 +82,8 @@ $(document).ready(function () {
                     console.log("Current temp: " + currentTemperature);
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
-                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n`;
+                    weather.innerHTML =  `\nCurrent Temperature: ${currentTemperature} °F \n
+                    Feels like: ${data.current.feels_like}`;
 
                     
                 }
@@ -113,7 +115,8 @@ $(document).ready(function () {
                     console.log("Current temp: " + currentTemperature);
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
-                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n`;
+                    weather.innerHTML =  `\nCurrent Temperature: ${currentTemperature} °F \n
+                    Feels like: ${data.current.feels_like}`;
 
                     
                 }
@@ -142,7 +145,8 @@ $(document).ready(function () {
                     console.log("Current temp: " + currentTemperature);
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
-                    weather.innerHTML =`\nCurrent Temperature: ${currentTemperature} °F \n`;
+                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n
+                    Feels like: ${data.current.feels_like}`;
 
                 }
             });
@@ -172,7 +176,8 @@ $(document).ready(function () {
                     console.log("Current temp: " + currentTemperature);
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
-                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n`;
+                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n
+                    Feels like: ${data.current.feels_like}`;
 
                     
                 }
