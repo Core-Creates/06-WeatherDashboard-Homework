@@ -15,9 +15,10 @@ $(document).ready(function () {
     // Grabs stuff in cities id
     var userCityId = document.getElementById('cities');
     var values = document.getElementById('showVal');
+    var weather = document.getElementById('main-content');
+    var city = document.getElementById('cityName');
 
-    var userSelection = ["Seatle", "New York", "New Orleans", "Los Angeles", "Austin"];
-
+    // var userSelection = ["Seatle", "New York", "New Orleans", "Los Angeles", "Austin"];
 
 
     userCityId.addEventListener('click', function(userSelection){
@@ -29,14 +30,30 @@ $(document).ready(function () {
 
         if (selection.anchorNode.data == "Seatle") {
 
-            lat = "47.608";
-            lon =  "-122.335";
+            lat = "47.606209";
+            lon =  "-122.332069";
             time = "1586468027";
             API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
-            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&dt=${time}&appid=${API_key}`;
+            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&dt=${time}&appid=${API_key}`;
 
             // Writes the city name to the showVal section of the HTML
-            document.getElementById('showVal').innerHTML = selection.anchorNode.data;
+            values.innerHTML = selection.anchorNode.data;
+
+
+            $.ajax({
+                url: url,
+                dataType: "json", 
+                success: function(data) { 
+                    currentTemperature = data.current.temp;
+
+                    console.log("Current temp: " + currentTemperature);
+                    city.innerHTML = `${selection.anchorNode.data} \n`;
+
+                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n`;
+
+                    
+                }
+            });
 
 
             console.log(url);
@@ -45,14 +62,30 @@ $(document).ready(function () {
         }
         else if (selection.anchorNode.data == "New York") {
 
-            lat = "47.608";
-            lon =  "-122.335";
+            lat = "	40.730610";
+            lon =  "-73.935242";
             time = "1586468027";
             API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
-            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&dt=${time}&appid=${API_key}`;
+            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&dt=${time}&appid=${API_key}`;
+
 
             // Writes the city name to the showVal section of the HTML
-            document.getElementById('showVal').innerHTML = selection.anchorNode.data;
+            values.innerHTML = selection.anchorNode.data;
+
+            $.ajax({
+                url: url,
+                dataType: "json", 
+                success: function(data) { 
+                    currentTemperature = data.current.temp;
+
+                    console.log("Current temp: " + currentTemperature);
+                    city.innerHTML = `${selection.anchorNode.data} \n`;
+
+                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n`;
+
+                    
+                }
+            });
 
             
             console.log(url);
@@ -61,43 +94,89 @@ $(document).ready(function () {
         }
         else if (selection.anchorNode.data == "New Orleans") {
 
-            lat = "47.608";
-            lon =  "-122.335";
+            lat = "29.951065";
+            lon =  "-90.071533";
             time = "1586468027";
             API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
-            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&dt=${time}&appid=${API_key}`;
+            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&dt=${time}&appid=${API_key}`;
+
 
             // Writes the city name to the showVal section of the HTML
-            document.getElementById('showVal').innerHTML = selection.anchorNode.data;
+            values.innerHTML = selection.anchorNode.data;
+
+            $.ajax({
+                url: url,
+                dataType: "json", 
+                success: function(data) { 
+                    currentTemperature = data.current.temp;
+
+                    console.log("Current temp: " + currentTemperature);
+                    city.innerHTML = `${selection.anchorNode.data} \n`;
+
+                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n`;
+
+                    
+                }
+            });
   
             console.log(url);
             console.log(selection.anchorNode.data);
         }
         else if (selection.anchorNode.data == "Los Angeles") {
 
-            lat = "47.608";
-            lon =  "-122.335";
+            lat = "34.052235";
+            lon =  "-118.243683";
             time = "1586468027";
             API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
-            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&dt=${time}&appid=${API_key}`;
+            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&dt=${time}&appid=${API_key}`;
 
             // Writes the city name to the showVal section of the HTML
-            document.getElementById('showVal').innerHTML = selection.anchorNode.data;
+            values.innerHTML = selection.anchorNode.data;
+
+            $.ajax({
+                url: url,
+                dataType: "json", 
+                success: function(data) { 
+                    currentTemperature = data.current.temp;
+
+                    console.log("Current temp: " + currentTemperature);
+                    city.innerHTML = `${selection.anchorNode.data} \n`;
+
+                    weather.innerHTML =`\nCurrent Temperature: ${currentTemperature} °F \n`;
+
+                }
+            });
 
             
-            console.log(url);
+            // console.log(url);
             console.log(selection.anchorNode.data);
         }
         else if (selection.anchorNode.data == "Austin") {
 
-            lat = "47.608";
-            lon =  "-122.335";
+            lat = "30.267153";
+            lon =  "-97.743057";
             time = "1586468027";
             API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
-            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&dt=${time}&appid=${API_key}`;
+            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&dt=${time}&appid=${API_key}`;
+
 
             // Writes the city name to the showVal section of the HTML
-            document.getElementById('showVal').innerHTML = selection.anchorNode.data;
+            values.innerHTML = selection.anchorNode.data;
+
+            $.ajax({
+                url: url,
+                dataType: "json", 
+                success: function(data) { 
+                    currentTemperature = data.current.temp;
+
+                    console.log("Current temp: " + currentTemperature);
+                    city.innerHTML = `${selection.anchorNode.data} \n`;
+
+                    weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F \n`;
+
+                    
+                }
+            });
             
             
             console.log(url);
@@ -114,7 +193,8 @@ $(document).ready(function () {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
-                values.innerHTML = this.responseText;
+                ob = this.responseText;
+                
               }
             }
         }
