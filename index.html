@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <!-- Beginning of head -->
 
@@ -32,32 +32,45 @@
 
             Weather Dashboard
 
-            <figure><img src="//ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="partly cloudy symbol"></figure>
+            <figure><img src="//ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="partly cloudy symbol">
+            </figure>
 
         </nav>
 
     </header>
     <!-- Ending of header ---------------------------------------------------------------->
 
-         <!-- Beginning of main -->
-         <main>
+    <!-- Beginning of main -->
+    <main>
 
-            <article>
-                <div class="card" id="weatherCard">
-                    <h2 id="cityName"></h2>
-                    <h2></h2>
-                    <p id="main-content"></p>
-                    <p id="feels"></p>
-                    <p></p>
-    
+        <article>
+            <div class="card" id="weatherCard">
+                
+                
+                <div class="row">
+
+                    <div class="col-sm-6">
+
+                        <h2 id="cityName"></h2>
+                        <br>
+                        <p id="main-content"></p>
+                        <p id="feels"></p>
+                        <p></p>
+
+                    </div>
+
+
+                    <div class="col-sm-6" id="map"></div>
                 </div>
-    
-            </article>
-    
-        </main>
+
+            </div>
+
+        </article>
+
+    </main>
 
 
-    <aside >
+    <aside>
         <br>
         <input type="text" name="display" id="display" />
         <br>
@@ -68,9 +81,9 @@
             <li class="list-group-item">New Orleans</li>
             <li class="list-group-item">Los Angeles</li>
             <li class="list-group-item">Austin</li>
-          </ul>
+        </ul>
 
-                  <!-- Card class div -->
+        <!-- Card class div -->
         <div class="card" style="margin-left: 0px;">
 
             <div class="card-body">
@@ -92,19 +105,23 @@
 
 
 
-   
+
     <!-- Beginning of footer -->
     <footer></footer>
     <!-- Ending of footer ------------------------------>
 
     <!-- Script sections -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="script.js"></script>
+
+    <script async
+        src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCtFzdbJA-H72PJ4sIY0gGWT9mDwEloPkA&callback=initMap'></script>
 
 </body>
 <!-- Ending of body ------------------------------------------------------------------------------------------------>
