@@ -55,7 +55,7 @@ $(document).ready(function () {
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
                     weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F `;
-                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like}`;
+                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like} °F`;
                     initMap(lat, lon);
 
 
@@ -91,7 +91,8 @@ $(document).ready(function () {
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
                     weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F `;
-                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like}`;
+                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like} °F`;
+                    initMap(lat, lon);
 
 
                 }
@@ -124,7 +125,8 @@ $(document).ready(function () {
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
                     weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F `;
-                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like}`;
+                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like} °F`;
+                    initMap(lat, lon);
 
 
                 }
@@ -154,7 +156,8 @@ $(document).ready(function () {
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
                     weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F`;
-                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like}`;
+                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like} °F`;
+                    initMap(lat, lon);
 
                 }
             });
@@ -185,7 +188,8 @@ $(document).ready(function () {
                     city.innerHTML = `${selection.anchorNode.data} \n`;
 
                     weather.innerHTML = `Current Temperature: ${currentTemperature} °F `;
-                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like}`;
+                    feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like} °F`;
+                    initMap(lat, lon);
 
 
                 }
