@@ -1,50 +1,123 @@
-// the get url
-var url = "https://api.openweathermap.org/data/2.5/onecall?lat=";
-
-// Grabs stuff in cities id
-var userCityId = document.getElementById('cities');
+$(document).ready(function () {
 
 
-var el = document.getElementById('showVal');
+    document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll("aside");
+        // var instances = M.Sidenav.init(elems, options);
+      });
 
-var userSelection = ["Seatle", "New York", "New Orleans", "Los Angeles", "Austin"];
+    // the get url
+    
+    var url;
+    var lat;
+    var lon;
 
-// console.log(userSelection);
+    // Grabs stuff in cities id
+    var userCityId = document.getElementById('cities');
+    var values = document.getElementById('showVal');
+
+    var userSelection = ["Seatle", "New York", "New Orleans", "Los Angeles", "Austin"];
 
 
 
-// old code
-url = url + userSelection;
+    userCityId.addEventListener('click', function(userSelection){
 
-function getSelectedOption(userSelection) {
-    var opt;
-    for (var i = 0, len = userSelection.length; i < len; i++) {
+        selection = window.getSelection();
+        localStorage.setItem("selected", selection.anchorNode.data);
 
-        opt = userSelection[i];
+        console.log(selection);
 
-        console.log(opt);
+        if (selection.anchorNode.data == "Seatle") {
 
-        if (opt.selected === true) {
-            // console.log(opt);
-            break;
+            lat = "47.608";
+            lon =  "-122.335";
+            time = "1586468027";
+            API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
+            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&dt=${time}&appid=${API_key}`;
 
+            // Writes the city name to the showVal section of the HTML
+            document.getElementById('showVal').innerHTML = selection.anchorNode.data;
+
+
+            console.log(url);
+            console.log(selection.anchorNode.data);
 
         }
-    }
-    return opt;
-}
+        else if (selection.anchorNode.data == "New York") {
 
+            lat = "47.608";
+            lon =  "-122.335";
+            time = "1586468027";
+            API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
+            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&dt=${time}&appid=${API_key}`;
 
+            // Writes the city name to the showVal section of the HTML
+            document.getElementById('showVal').innerHTML = selection.anchorNode.data;
 
-// get selected option in userSelection (reference obtained above)
-var opt = getSelectedOption(userSelection);
+            
+            console.log(url);
+            console.log(selection.anchorNode.data);
 
-userCityId.onclick = function () {
-    selection = window.getSelection();
-    localStorage.setItem("selected", selection);
-    el = selection.childNodes;
-    console.log(el);
+        }
+        else if (selection.anchorNode.data == "New Orleans") {
 
-}
+            lat = "47.608";
+            lon =  "-122.335";
+            time = "1586468027";
+            API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
+            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&dt=${time}&appid=${API_key}`;
 
+            // Writes the city name to the showVal section of the HTML
+            document.getElementById('showVal').innerHTML = selection.anchorNode.data;
+  
+            console.log(url);
+            console.log(selection.anchorNode.data);
+        }
+        else if (selection.anchorNode.data == "Los Angeles") {
 
+            lat = "47.608";
+            lon =  "-122.335";
+            time = "1586468027";
+            API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
+            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&dt=${time}&appid=${API_key}`;
+
+            // Writes the city name to the showVal section of the HTML
+            document.getElementById('showVal').innerHTML = selection.anchorNode.data;
+
+            
+            console.log(url);
+            console.log(selection.anchorNode.data);
+        }
+        else if (selection.anchorNode.data == "Austin") {
+
+            lat = "47.608";
+            lon =  "-122.335";
+            time = "1586468027";
+            API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
+            url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&dt=${time}&appid=${API_key}`;
+
+            // Writes the city name to the showVal section of the HTML
+            document.getElementById('showVal').innerHTML = selection.anchorNode.data;
+            
+            
+            console.log(url);
+            console.log(selection.anchorNode.data);
+
+        }
+        else {
+            
+            console.log("not an option");
+
+        }
+
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                values.innerHTML = this.responseText;
+              }
+            }
+        }
+    })
+
+});
