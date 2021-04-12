@@ -111,6 +111,8 @@ $(document).ready(function () {
             API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
             url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&dt=${time}&appid=${API_key}`;
 
+            url2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&daily=7&appid=${API_key}`;
+
 
             // Writes the city name to the showVal section of the HTML
             values.innerHTML = selection.anchorNode.data;
@@ -132,7 +134,35 @@ $(document).ready(function () {
                 }
             });
 
+            $.ajax({
+                url: url2,
+                dataType: "json",
+                success: function (data) {
+                    
 
+
+                    city.innerHTML = `${selection.anchorNode.data} \n`;
+                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; ">
+                    \n 7 Day Forcast: \n
+                    Today: ${data.list[0].main.temp} °F\n 
+
+                    Tomorrow : ${data.list[1].main.temp} °F\n 
+
+                    Next day: ${data.list[2].main.temp} °F\n 
+
+                    Next day: ${data.list[3].main.temp} °F\n 
+
+                    Next day: ${data.list[4].main.temp} °F\n 
+
+                    Next day: ${data.list[5].main.temp} °F\n 
+
+                    Next day: ${data.list[6].main.temp} °F\n
+                    </div>`;
+                    initMap(lat, lon);
+
+
+                }
+            });
             // console.log(url);
             // console.log(selection.anchorNode.data);
 
@@ -144,6 +174,8 @@ $(document).ready(function () {
             time = "1586468027";
             API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
             url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&dt=${time}&appid=${API_key}`;
+
+            url2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&daily=7&appid=${API_key}`;
 
 
             // Writes the city name to the showVal section of the HTML
@@ -160,6 +192,36 @@ $(document).ready(function () {
 
                     weather.innerHTML = `\nCurrent Temperature: ${currentTemperature} °F `;
                     feelsLike.innerHTML = `\nFeels like: ${data.current.feels_like} °F`;
+                    initMap(lat, lon);
+
+
+                }
+            });
+
+            $.ajax({
+                url: url2,
+                dataType: "json",
+                success: function (data) {
+                    
+
+
+                    city.innerHTML = `${selection.anchorNode.data} \n`;
+                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; ">
+                    \n 7 Day Forcast: \n
+                    Today: ${data.list[0].main.temp} °F\n 
+
+                    Tomorrow : ${data.list[1].main.temp} °F\n 
+
+                    Next day: ${data.list[2].main.temp} °F\n 
+
+                    Next day: ${data.list[3].main.temp} °F\n 
+
+                    Next day: ${data.list[4].main.temp} °F\n 
+
+                    Next day: ${data.list[5].main.temp} °F\n 
+
+                    Next day: ${data.list[6].main.temp} °F\n
+                    </div>`;
                     initMap(lat, lon);
 
 
@@ -176,6 +238,8 @@ $(document).ready(function () {
             time = "1586468027";
             API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
             url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&dt=${time}&appid=${API_key}`;
+
+            url2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&daily=7&appid=${API_key}`;
 
             // Writes the city name to the showVal section of the HTML
             values.innerHTML = selection.anchorNode.data;
@@ -196,6 +260,36 @@ $(document).ready(function () {
                 }
             });
 
+            $.ajax({
+                url: url2,
+                dataType: "json",
+                success: function (data) {
+                    
+
+
+                    city.innerHTML = `${selection.anchorNode.data} \n`;
+                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; ">
+                    \n 7 Day Forcast: \n
+                    Today: ${data.list[0].main.temp} °F\n 
+
+                    Tomorrow : ${data.list[1].main.temp} °F\n 
+
+                    Next day: ${data.list[2].main.temp} °F\n 
+
+                    Next day: ${data.list[3].main.temp} °F\n 
+
+                    Next day: ${data.list[4].main.temp} °F\n 
+
+                    Next day: ${data.list[5].main.temp} °F\n 
+
+                    Next day: ${data.list[6].main.temp} °F\n
+                    </div>`;
+                    initMap(lat, lon);
+
+
+                }
+            });
+
 
             // console.log(url);
             // console.log(selection.anchorNode.data);
@@ -207,6 +301,8 @@ $(document).ready(function () {
             time = "1586468027";
             API_key = "572c06f39e6d6617f9c6f6a00e8fe448";
             url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&dt=${time}&appid=${API_key}`;
+
+            url2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&daily=7&appid=${API_key}`;
 
 
             // Writes the city name to the showVal section of the HTML
@@ -231,6 +327,35 @@ $(document).ready(function () {
                 }
             });
 
+            $.ajax({
+                url: url2,
+                dataType: "json",
+                success: function (data) {
+                    
+
+
+                    city.innerHTML = `${selection.anchorNode.data} \n`;
+                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; ">
+                    \n 7 Day Forcast: \n
+                    Today: ${data.list[0].main.temp} °F\n 
+
+                    Tomorrow : ${data.list[1].main.temp} °F\n 
+
+                    Next day: ${data.list[2].main.temp} °F\n 
+
+                    Next day: ${data.list[3].main.temp} °F\n 
+
+                    Next day: ${data.list[4].main.temp} °F\n 
+
+                    Next day: ${data.list[5].main.temp} °F\n 
+
+                    Next day: ${data.list[6].main.temp} °F\n
+                    </div>`;
+                    initMap(lat, lon);
+
+
+                }
+            });
 
             // console.log(url);
             // console.log(selection.anchorNode.data);
