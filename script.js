@@ -74,21 +74,21 @@ $(document).ready(function () {
 
 
                     city.innerHTML = `${selection.anchorNode.data} \n`;
-                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; ">
-                    \n 7 Day Forcast: \n
-                    <p> Today: ${data.list[0].main.temp} °F </p>
+                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; height">
+                    <h4>7 Day Forcast: </h4>
+                    <p> Today: ${data.list[0].main.temp} °F,
 
-                    <p> Tomorrow : ${data.list[1].main.temp} °F </p>
+                    Tomorrow : ${data.list[1].main.temp} °F,
 
-                    <p> Next day: ${data.list[2].main.temp} °F </p>
+                    Next day: ${data.list[2].main.temp} °F,
 
-                    <p> Next day: ${data.list[3].main.temp} °F </p>
+                    Next day: ${data.list[3].main.temp} °F,
 
-                    <p> Next day: ${data.list[4].main.temp} °F </p>
+                    Next day: ${data.list[4].main.temp} °F,
 
-                    <p> Next day: ${data.list[5].main.temp} °F </p>
+                    Next day: ${data.list[5].main.temp} °F,
 
-                    <p> Next day: ${data.list[6].main.temp} °F </p>
+                    Next day: ${data.list[6].main.temp} °F, </p>
                     </div>`;
                     initMap(lat, lon);
 
@@ -140,17 +140,22 @@ $(document).ready(function () {
                 success: function (data) {
                     
 
-
                     city.innerHTML = `${selection.anchorNode.data} \n`;
-                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; height: 200px;">
-                    <p> 7 Day Forcast: \n
-                    Today: ${data.list[0].main.temp} °F
-                    Tomorrow: ${data.list[1].main.temp} °F
-                    Next day: ${data.list[2].main.temp} °F 
-                    Next day: ${data.list[3].main.temp} °F 
-                    Next day: ${data.list[4].main.temp} °F
-                    Next day: ${data.list[5].main.temp} °F 
-                    Next day: ${data.list[6].main.temp} °F </p>
+                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; height">
+                    <h4>7 Day Forcast: </h4>
+                    <p> Today: ${data.list[0].main.temp} °F,
+
+                    Tomorrow : ${data.list[1].main.temp} °F,
+
+                    Next day: ${data.list[2].main.temp} °F,
+
+                    Next day: ${data.list[3].main.temp} °F,
+
+                    Next day: ${data.list[4].main.temp} °F,
+
+                    Next day: ${data.list[5].main.temp} °F,
+
+                    Next day: ${data.list[6].main.temp} °F, </p>
                     </div>`;
                     initMap(lat, lon);
 
@@ -201,20 +206,20 @@ $(document).ready(function () {
 
                     city.innerHTML = `${selection.anchorNode.data} \n`;
                     weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; height">
-                    7 Day Forcast: \n
-                    <p> Today: ${data.list[0].main.temp} °F\n 
+                    <h4>7 Day Forcast: </h4>
+                    <p> Today: ${data.list[0].main.temp} °F,
 
-                    Tomorrow : ${data.list[1].main.temp} °F\n
+                    Tomorrow : ${data.list[1].main.temp} °F,
 
-                    Next day: ${data.list[2].main.temp} °F\n
+                    Next day: ${data.list[2].main.temp} °F,
 
-                    Next day: ${data.list[3].main.temp} °F\n
+                    Next day: ${data.list[3].main.temp} °F,
 
-                    Next day: ${data.list[4].main.temp} °F\n
+                    Next day: ${data.list[4].main.temp} °F,
 
-                    Next day: ${data.list[5].main.temp} °F\n
+                    Next day: ${data.list[5].main.temp} °F,
 
-                    Next day: ${data.list[6].main.temp} °F\n </p>
+                    Next day: ${data.list[6].main.temp} °F, </p>
                     </div>`;
                     initMap(lat, lon);
 
@@ -262,21 +267,21 @@ $(document).ready(function () {
 
 
                     city.innerHTML = `${selection.anchorNode.data} \n`;
-                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; ">
-                    \n 7 Day Forcast: \n
-                    <p> Today: ${data.list[0].main.temp} °F\n </p>
+                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; height">
+                    <h4>7 Day Forcast: </h4>
+                    <p> Today: ${data.list[0].main.temp} °F,
 
-                    <p> Tomorrow : ${data.list[1].main.temp} °F\n </p>
+                    Tomorrow : ${data.list[1].main.temp} °F,
 
-                    <p> Next day: ${data.list[2].main.temp} °F\n </p>
+                    Next day: ${data.list[2].main.temp} °F,
 
-                    <p> Next day: ${data.list[3].main.temp} °F\n </p>
+                    Next day: ${data.list[3].main.temp} °F,
 
-                    <p> Next day: ${data.list[4].main.temp} °F\n </p>
+                    Next day: ${data.list[4].main.temp} °F,
 
-                    <p> Next day: ${data.list[5].main.temp} °F\n </p>
+                    Next day: ${data.list[5].main.temp} °F,
 
-                    <p> Next day: ${data.list[6].main.temp} °F\n </p>
+                    Next day: ${data.list[6].main.temp} °F, </p>
                     </div>`;
                     initMap(lat, lon);
 
@@ -329,21 +334,21 @@ $(document).ready(function () {
 
 
                     city.innerHTML = `${selection.anchorNode.data} \n`;
-                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; ">
-                    \n 7 Day Forcast: \n
-                    <p> Today: ${data.list[0].main.temp} °F\n </p>
+                    weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; height">
+                    <h4>7 Day Forcast: </h4>
+                    <p> Today: ${data.list[0].main.temp} °F,
 
-                    <p> Tomorrow : ${data.list[1].main.temp} °F\n </p>
+                    Tomorrow : ${data.list[1].main.temp} °F,
 
-                    <p> Next day: ${data.list[2].main.temp} °F\n </p>
+                    Next day: ${data.list[2].main.temp} °F,
 
-                    <p> Next day: ${data.list[3].main.temp} °F\n </p>
+                    Next day: ${data.list[3].main.temp} °F,
 
-                    <p> Next day: ${data.list[4].main.temp} °F\n </p>
+                    Next day: ${data.list[4].main.temp} °F,
 
-                    <p> Next day: ${data.list[5].main.temp} °F\n </p>
+                    Next day: ${data.list[5].main.temp} °F,
 
-                    <p> Next day: ${data.list[6].main.temp} °F\n </p>
+                    Next day: ${data.list[6].main.temp} °F, </p>
                     </div>`;
                     initMap(lat, lon);
 
