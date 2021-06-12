@@ -70,7 +70,7 @@ $(document).ready(function () {
                 url: url2,
                 dataType: "json",
                 success: function (data) {
-                    
+
 
 
                     city.innerHTML = `${selection.anchorNode.data} \n`;
@@ -138,7 +138,7 @@ $(document).ready(function () {
                 url: url2,
                 dataType: "json",
                 success: function (data) {
-                    
+
 
                     city.innerHTML = `${selection.anchorNode.data} \n`;
                     weekForcast.innerHTML = `<div class ="card" style="width: 90%; text-align: center; padding: 10px; margin-left: 0px; height">
@@ -201,7 +201,7 @@ $(document).ready(function () {
                 url: url2,
                 dataType: "json",
                 success: function (data) {
-                    
+
 
 
                     city.innerHTML = `${selection.anchorNode.data} \n`;
@@ -263,7 +263,7 @@ $(document).ready(function () {
                 url: url2,
                 dataType: "json",
                 success: function (data) {
-                    
+
 
 
                     city.innerHTML = `${selection.anchorNode.data} \n`;
@@ -330,7 +330,7 @@ $(document).ready(function () {
                 url: url2,
                 dataType: "json",
                 success: function (data) {
-                    
+
 
 
                     city.innerHTML = `${selection.anchorNode.data} \n`;
@@ -389,9 +389,20 @@ function initMap(lat, lng) {
         zoom: 10,
 
     });
-    marker.addListener("click", () => {
-        infowindow.open(map, marker);
+
+    const myLatlng = { lat: lat, lng: lng };
+    const marker = new google.maps.Marker({
+        position: myLatlng,
+        map,
+        title: "Click to zoom",
+        
     });
+
+    // marker.addListener("click", () => {
+    //     infowindow.open(map, marker);
+    // });
+
+
     loadMapAt(new google.maps.LatLng(geo.lat, geo.lng));
 
 }
